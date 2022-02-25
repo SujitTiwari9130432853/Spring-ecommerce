@@ -51,16 +51,16 @@ public class CategoryServiceTest {
 	}
 	
 	
-	@Test
-	public void saveCategoryTest(){
-		List<CategoryModel> catlist1=new ArrayList<>();
-		CategoryModel category2=new CategoryModel(1, "Electronics", "E1", false);
-		for (CategoryModel categoryModel : catlist1) {
-			when(categoryrepo.save(category2)).thenReturn(categoryModel);
-			assertEquals(1, categoryservice.saveCategory(category2));
-			//assertNotNull(categoryservice.saveCategory(category2));
-		}
-	}
+//	@Test
+//	public void saveCategoryTest(){
+//		List<CategoryModel> catlist1=new ArrayList<>();
+//		CategoryModel category2=new CategoryModel(1, "Electronics", "E1", false);
+//		for (CategoryModel categoryModel : catlist1) {
+//			when(categoryrepo.save(category2)).thenReturn(categoryModel);
+//			assertEquals(1, categoryservice.saveCategory(category2));
+//			//assertNotNull(categoryservice.saveCategory(category2));
+//		}
+//	}
 	
 //	@Test
 //	public void getbyIdtest(){
@@ -87,21 +87,21 @@ public class CategoryServiceTest {
 //		
 //	}
 //	
-	@Test
-	public void getByIDTest(){
-		List<CategoryModel> list=new ArrayList<>();
-		CategoryModel category5=new CategoryModel();
-		category5.setId(1);
-		category5.setName("Electronics");
-		category5.setAlias("E1");
-		category5.setEnabled(false);
-		list.add(category5);
-		Optional<CategoryModel> op1=list.stream().findAny();
-		when(categoryrepo.findById(1)).thenReturn(op1);
-		assertEquals(op1, categoryservice.getCategoryById(1));
-	}
-	
-	
+//	@Test
+//	public void getByIDTest(){
+//		List<CategoryModel> list=new ArrayList<>();
+//		CategoryModel category5=new CategoryModel();
+//		category5.setId(1);
+//		category5.setName("Electronics");
+//		category5.setAlias("E1");
+//		category5.setEnabled(false);
+//		list.add(category5);
+//		Optional<CategoryModel> op1=list.stream().findAny();
+//		when(categoryrepo.findById(1)).thenReturn(op1);
+//		assertEquals(op1, categoryservice.getCategoryById(1));
+//	}
+//	
+//	
 	
 
 }

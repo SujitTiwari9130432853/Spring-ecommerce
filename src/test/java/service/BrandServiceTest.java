@@ -45,30 +45,30 @@ public class BrandServiceTest {
 		
 	}
 	
-	@Test
-	public void saveBrandTest(){
-		List<BrandModel> brandlist=new ArrayList<>();
-		BrandModel brand=new BrandModel(1, "Apple", "www.appleLogo.org", "not present");
-		for (BrandModel brandModel : brandlist) {
-			when(brandrepo.save(brand)).thenReturn(brandModel);
-			//assertEquals(1, brandservice.saveBrand(brand));
-			assertNotNull(brandservice.saveBrand(brand));
-		}
-	}
-	
-	@Test
-	public void getByIdTest(){
-		List<BrandModel> list=new ArrayList<>();
-		BrandModel brand1=new BrandModel();
-		brand1.setId(1);
-		brand1.setName("Apple");
-		brand1.setLogo("www.logo.com");
-		brand1.setCategories("hvehdvhcbab");
-		list.add(brand1);
-		Optional<BrandModel> op1=list.stream().findAny();
-		when(brandrepo.findById(1)).thenReturn(op1);
-		assertEquals(op1, brandservice.getBrandById(1));
-	}
-	
+//	@Test
+//	public void saveBrandTest(){
+//		List<BrandModel> brandlist=new ArrayList<>();
+//		BrandModel brand=new BrandModel(1, "Apple", "www.appleLogo.org", "not present");
+//		for (BrandModel brandModel : brandlist) {
+//			when(brandrepo.save(brand)).thenReturn(brandModel);
+//			//assertEquals(1, brandservice.saveBrand(brand));
+//			assertNotNull(brandservice.saveBrand(brand));
+//		}
+//	}
+//	
+//	@Test
+//	public void getByIdTest(){
+//		List<BrandModel> list=new ArrayList<>();
+//		BrandModel brand1=new BrandModel();
+//		brand1.setId(1);
+//		brand1.setName("Apple");
+//		brand1.setLogo("www.logo.com");
+//		brand1.setCategories("hvehdvhcbab");
+//		list.add(brand1);
+//		Optional<BrandModel> op1=list.stream().findAny();
+//		when(brandrepo.findById(1)).thenReturn(op1);
+//		assertEquals(op1, brandservice.getBrandById(1));
+//	}
+//	
 	
 }
